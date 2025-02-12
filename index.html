@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button id="openLetter">💌 Abre tu carta 💌</button>
+        <div class="card" id="letter">
+            <h1>Para Mi Querida Estrellita ✨</h1>
+            <p>En este día tan especial, quiero decirte que en verdad me gustas mucho, que haces de mis días los más felices y los más hermosos, 
+            le das luz a cada uno de mis días, estar a tu lado es el regalo que más atesoro que la vida me ha dado, estoy muy agradecido por 
+            conocerte y porque estés en mi vida, eres una chica realmente especial para mí, y en verdad me gustaría que me dieses el honor 
+            de poder ser tu San Valentín en este bello día.</p>
+            <p>Sin importar cuál sea tu respuesta, quiero que sepas que todo lo que hago, lo hago con mucho cariño y amor por ti, porque lo que busco 
+            con todo esto es ver tu hermosa sonrisa, que transmita esa radiante felicidad y alegría que tanto me gusta ver en ti. ❤️</p>
+            <p>Con mucho cariño, y mucho amor</p>
+            <p><strong>Tu algodón de azúcar con patas</strong> 🍭</p>
+            <div class="cat">🐱💕</div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("openLetter").addEventListener("click", function() {
+            document.getElementById("letter").classList.add("show");
+            this.style.display = "none";
+        });
+    </script>
+<script>
+        document.getElementById("openLetter").addEventListener("click", function() {
+            document.getElementById("letter").classList.add("show");
+            this.style.display = "none";
+        });
+
+        // Generación de corazones animados
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+    </body>
+</html>
